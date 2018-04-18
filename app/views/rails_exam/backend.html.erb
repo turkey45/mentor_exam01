@@ -1,5 +1,46 @@
-<div id="backend-exam">
+<div id="rails-exam">
   <div class="container">
-  
+
+    <div class="question question-00">
+      <h1 class="question-header">事前準備: rails db:seedをしてseedファイルをimportしてください</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q1. 以下のテーブルに著者(Author)別の書籍数を表示してください</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q2. 以下のテーブルの"姓"・"名"という列を結合して"氏名"という列にしたいです。Helperメソッドを用いてこれを実現してください。</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q3. Q2で作成した、"氏名"列をクリックすると、それぞれの著者の書籍一覧が表示されるよう実装してください。
+        <div>
+          <small>※この際、デザインは考慮しないで構いません。</small>
+        </div>
+        <div>
+          <small>※余裕がある方はMaterialize.css(インポート済)のtableレイアウトを使用してください</small>
+        </div>
+      </h1>
+
+    </div>
+
+    <div class="list">
+      <table>
+        <thead>
+          <tr>
+              <th>姓</th>
+              <th>名</th>
+              <th>書籍数</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @authors.each do |author| %>
+            <%= render partial: 'author', locals: { author: author } %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

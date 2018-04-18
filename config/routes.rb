@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'home#index'
+
   get '/css-exam' => 'css_exam#index'
   get '/ruby-exam' => 'ruby_exam#index'
 
@@ -7,7 +8,10 @@ Rails.application.routes.draw do
     collection do
       get 'errors'
       get 'backend'
+      get 'backend02'
       get 'active_record_exam'
     end
   end
+
+  resources :books, only: :create
 end

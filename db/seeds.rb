@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+puts "Importing"
+
+authors = CSV.table('db/seeds/authors.csv', headers: true)
+authors.each {|author| Author.create(author.to_hash) }
+
+books = CSV.table('db/seeds/books.csv', headers: true)
+books.each {|book| Book.create(book.to_hash) }
+
+puts "Finished!"

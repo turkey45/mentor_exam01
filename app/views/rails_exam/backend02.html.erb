@@ -1,0 +1,54 @@
+<div id="rails-exam">
+  <div class="container">
+
+    <div class="question question-00">
+      <h1 class="question-header">以下のフォームは、書籍のタイトル, 価格, 著者IDを登録するフォームです</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q1. タイトル / 価格 を必須とするバックエンドバリデーションを実装してください</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q2. セレクトボックスからDBに格納されている著者を選択し、保存できるように実装してください</h1>
+    </div>
+
+    <div class="question question-01">
+      <h1 class="question-header">Q3. 保存時に、もし同タイトル同著者の書籍がすでに登録されていた場合、StandardErrorを吐く用に実装してください</h1>
+    </div>
+
+
+    <div class="row">
+      <%= form_for @book, class: 'col s12' do |f| %>
+        <div class="row">
+          <div class="input-field col s6">
+            <%= f.text_field :title, id: "book_title" %>
+            <%= f.label :title %>
+          </div>
+          <div class="input-field col s6">
+            <%= f.text_field :price, id: "book_price" %>
+            <%= f.label :price %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.select :author_id, [["hello", 1], ["this", 2]] %>
+            <label>著者</label>
+          </div>
+        </div>
+
+        <div class="row center-align">
+          <%= f.submit "Send", class: "waves-effect waves-light btn  blue darken-2" %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
