@@ -12,5 +12,6 @@ class RailsExamController < ApplicationController
 
   def backend02
     @book = Book.new
+    @authors = Author.selector
   end
 end
