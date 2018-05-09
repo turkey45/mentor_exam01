@@ -6,6 +6,12 @@
 
 #css-exam {
   .blue-rect-wrapper {
+    display: flex;
+    display: -ms-flex;
+    justify-content: center;
+    -ms-justify-content: center;
+    align-items: center;
+    -ms-align-items: center;
     margin: 20px auto;
     width: 300px;
     height: 300px;
