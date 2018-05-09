@@ -1,0 +1,20 @@
+<div id="author-show">
+  <div class="container">
+    <h1 class="author-name"><%= full_name(@author.family_name, @author.first_name) %></h1>
+    <div class="back">
+      <%= link_to "Back", backend_rails_exam_index_path, class: "waves-effect waves-light btn bg-mainBlue"%>
+    </div>
+
+    <table>
+      <thead>
+        <%= render partial: "book_header" %>
+      </thead>
+
+      <tbody>
+        <% @books.each do |book| %>
+          <%= render partial: 'book', locals: { book: book } %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

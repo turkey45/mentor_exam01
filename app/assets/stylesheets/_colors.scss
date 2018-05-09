@@ -1,2 +1,11 @@
 $white: #fff;
 $mainBlue: #0073c4;
+
+.bg-mainBlue {
+  background-color: $mainBlue;
+}
+
+.bg-mainBlue:hover {
+  background-color: $mainBlue;
+  opacity: 0.8;
+}

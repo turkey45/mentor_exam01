@@ -1,0 +1,16 @@
+// Place all the styles related to the authors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#author-show {
+  .author-name {
+    display: inline-block;
+    width: 70%;
+  }
+
+  .back {
+    display: inline-block;
+    text-align: right;
+    width: 29%;
+  }
+}
