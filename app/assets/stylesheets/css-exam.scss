@@ -29,6 +29,7 @@
 
   .question-02 {
     .rect {
+      display: inline-block;
       border: 1px solid white;
       box-sizing: border-box;
     }
@@ -36,7 +37,12 @@
 
   .question-03 {
     .rect {
-      display: inline-block;
+      display: flex;
+      display: -ms-flex;
+      justify-content: center;
+      -ms-justify-content: center;
+      align-items: center;
+      -ms-align-items: center;
       padding: 10px;
       width: 100%;
       color: white;
