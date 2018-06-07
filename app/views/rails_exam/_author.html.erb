@@ -1,6 +1,5 @@
 <tr>
-  <td><%= author.family_name %></td>
-  <td><%= author.first_name %></td>
+  <td><%= author.fullname %></td>
   <td><%= author.books.length %>冊</td>
   <td><%= author.books.order('price DESC').first.title %></td>
   <td><%= author.books.maximum('price').to_i * 108/100 %></td>
