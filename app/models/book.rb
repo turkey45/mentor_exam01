@@ -5,6 +5,6 @@ belongs_to :author
   end
 
 
-  validates :title, presence: true
+  validates :title, presence: true, uniqueness: true
   validates :price, presence: true, numericality: true
 end
